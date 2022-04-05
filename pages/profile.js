@@ -303,7 +303,8 @@ export default function profile({user}) {
 
 export async function getServerSideProps() {
     // Fetch data from external API
-    const res = await fetch(`http://127.0.0.1:8000/users/1`)
+    // const res = await fetch(`http://127.0.0.1:8000/users/1`)
+    const res = await fetch(`https://sknportfolio.herokuapp.com/users/1`)
     const data = await res.json()
     console.log(data)
     // Pass data to the page via props
