@@ -24,7 +24,6 @@ export default function profile({user}) {
             const r = await info.json()
             data.image = r.url;
             maneno = data
-            console.log(maneno)
         }else{maneno = data}
         dispatch(updateUser(maneno))
         .then(res => {
@@ -306,7 +305,6 @@ export async function getServerSideProps() {
     // const res = await fetch(`http://127.0.0.1:8000/users/1`)
     const res = await fetch(`https://sknportfolio.herokuapp.com/users/1`)
     const data = await res.json()
-    console.log(data)
     // Pass data to the page via props
     return { props: { user:data } }
   }
