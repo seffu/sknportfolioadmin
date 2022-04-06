@@ -100,28 +100,28 @@ export default function education() {
     },[dispatch]);
   return (
     <>
-        <div class="container-fluid flex-grow-1 container-p-y">
-            <h4 class="font-weight-bold py-3 mb-0">Education</h4>
-            <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
-                    <li class="breadcrumb-item active"><a href="#!">Education</a></li>
+        <div className="container-fluid flex-grow-1 container-p-y">
+            <h4 className="font-weight-bold py-3 mb-0">Education</h4>
+            <div className="text-muted small mt-0 mb-4 d-block breadcrumb">
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item"><a href="#"><i className="feather icon-home"></i></a></li>
+                    <li className="breadcrumb-item active"><a href="#!">Education</a></li>
                 </ol>
             </div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row align-items-center m-l-0">
-                                    <div class="col-sm-6">
+                <div className="row">
+                    <div className="col-xl-12">
+                        <div className="card">
+                            <div className="card-body">
+                                <div className="row align-items-center m-l-0">
+                                    <div className="col-sm-6">
                                     </div>
-                                    <div class="col-sm-6 text-right">
-                                        <button class="btn btn-success btn-sm mb-3 btn-round" onClick={() => reset()} data-toggle="modal" data-target="#modal-report"><i class="feather icon-plus"></i> Add Education</button>
+                                    <div className="col-sm-6 text-right">
+                                        <button className="btn btn-success btn-sm mb-3 btn-round" onClick={() => reset()} data-toggle="modal" data-target="#modal-report"><i className="feather icon-plus"></i> Add Education</button>
                                     </div>
                                 </div>
-                                <div class="table-responsive">
-                                    <table id="report-table" class="table mb-0">
-                                        <thead class="thead-light">
+                                <div className="table-responsive">
+                                    <table id="report-table" className="table mb-0">
+                                        <thead className="thead-light">
                                             <tr>
                                                 <th>Title</th>
                                                 <th>School</th>
@@ -136,32 +136,32 @@ export default function education() {
                                         <tbody>
                                             {educations.map((education)=>(
                                                 <tr key={education.education_id}>
-                                                    <td class="align-middle">
-                                                        <p class="m-0 d-inline-block align-middle font-16">
-                                                            <a href="#!" class="text-body">{education.title}</a>
+                                                    <td className="align-middle">
+                                                        <p className="m-0 d-inline-block align-middle font-16">
+                                                            <a href="#!" className="text-body">{education.title}</a>
                                                         </p>
                                                     </td>
-                                                    <td class="align-middle">
+                                                    <td className="align-middle">
                                                     {education.school}
                                                     </td>
-                                                    <td class="align-middle">
+                                                    <td className="align-middle">
                                                     {education.level}
                                                     </td>
-                                                    <td class="align-middle">
+                                                    <td className="align-middle">
                                                     {education.field}
                                                     </td>
-                                                    <td class="align-middle">
+                                                    <td className="align-middle">
                                                     {education.location}
                                                     </td>
-                                                    <td class="align-middle">
+                                                    <td className="align-middle">
                                                     {education.start_date}
                                                     </td>
-                                                    <td class="align-middle">
+                                                    <td className="align-middle">
                                                     {education.end_date}
                                                     </td>
-                                                    <td class="table-action">
-                                                        <a href="#!" data-toggle="modal" data-target="#modal-edit" onClick={() => reset2(education)} class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
-                                                        <a href="#!" onClick={e => removeEducation(education.education_id)} class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2"></i></a>
+                                                    <td className="table-action">
+                                                        <a href="#!" data-toggle="modal" data-target="#modal-edit" onClick={() => reset2(education)} className="btn btn-icon btn-outline-success"><i className="feather icon-edit"></i></a>
+                                                        <a href="#!" onClick={e => removeEducation(education.education_id)} className="btn btn-icon btn-outline-danger"><i className="feather icon-trash-2"></i></a>
                                                     </td>
                                                 </tr>
                                             ))}
@@ -173,63 +173,63 @@ export default function education() {
                     </div>
                 </div>
         </div>
-        <div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Add Education</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div className="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <h5 className="modal-title">Add Education</h5>
+                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div className="modal-body">
                     <form onSubmit={handleSubmit(onSubmit)} enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label class="floating-label" for="Title">Title</label>
+                        <div className="row">
+                            <div className="col-sm-12">
+                                <div className="form-group">
+                                    <label className="floating-label" for="Title">Title</label>
                                     <input {...register("title")} className="form-control" id="title"/>
-                                    {/* <input type="text" class="form-control" id="title" placeholder=""/> */}
+                                    {/* <input type="text" className="form-control" id="title" placeholder=""/> */}
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Details">School</label>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" for="Details">School</label>
                                     <input {...register("school")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Level</label>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" for="Details">Level</label>
                                     <input {...register("level")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Field</label>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" for="Details">Field</label>
                                     <input {...register("field")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Location</label>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" for="Details">Location</label>
                                     <input {...register("location")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Start Date</label>
-                                    <input type="text" class="form-control datepicker-base" {...register("start_date")} />
+                            <div className="col-sm-6">
+                                <div className="form-group fill">
+                                    <label className="floating-label" for="Details">Start Date</label>
+                                    <input type="text" className="form-control datepicker-base" {...register("start_date")} />
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Details">End Date</label>
-                                    <input type="text" {...register("end_date")} class="form-control datepicker-base" />
+                            <div className="col-sm-6">
+                                <div className="form-group fill">
+                                    <label className="floating-label" for="Details">End Date</label>
+                                    <input type="text" {...register("end_date")} className="form-control datepicker-base" />
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <button class="btn btn-primary">Submit</button>
+                            <div className="col-sm-12">
+                                <button className="btn btn-primary">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -238,7 +238,7 @@ export default function education() {
         </div>
         </div>
 
-        <div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div className="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">

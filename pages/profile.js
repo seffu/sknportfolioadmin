@@ -192,26 +192,26 @@ export default function profile({user}) {
                             </div>
                                 <div className="col-sm-6">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">First Name</label>
+                                        <label className="floating-label" htmlFor="Title">First Name</label>
                                         <input {...register("first_name")} className="form-control" id="title"/>
                                         {/* <input type="text" className="form-control" id="title" placeholder=""/> */}
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">Last Name</label>
+                                        <label className="floating-label" htmlFor="Title">Last Name</label>
                                         <input {...register("last_name")} className="form-control" id="title"/>
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">Email</label>
+                                        <label className="floating-label" htmlFor="Title">Email</label>
                                         <input {...register("email")} className="form-control" id="title"/>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label class="floating-label" for="Sex">Select Gender</label>
+                                    <label class="floating-label" htmlFor="Sex">Select Gender</label>
                                     <select class="form-control" {...register("gender")}id="Sex">
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
@@ -220,32 +220,32 @@ export default function profile({user}) {
                             </div>
                             <div className="col-sm-6">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">Address</label>
+                                        <label className="floating-label" htmlFor="Title">Address</label>
                                         <input {...register("address")} className="form-control" id="title"/>
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">Ext</label>
+                                        <label className="floating-label" htmlFor="Title">Ext</label>
                                         <input {...register("ext")} className="form-control" id="title"/>
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">Phone No.</label>
+                                        <label className="floating-label" htmlFor="Title">Phone No.</label>
                                         <input {...register("phone")} className="form-control" id="title"/>
                                         {/* <input type="text" className="form-control" id="title" placeholder=""/> */}
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">Alternative Phone No.</label>
+                                        <label className="floating-label" htmlFor="Title">Alternative Phone No.</label>
                                         <input {...register("phone2")} className="form-control" id="title"/>
                                     </div>
                                 </div>
                                 <div className="col-sm-12">
                                     <div className="form-group fill">
-                                        <label className="floating-label" for="Details">Description</label>
+                                        <label className="floating-label" htmlFor="Details">Description</label>
                                         <textarea rows="5" className="form-control" {...register("description")}></textarea>
                                     </div>
                                 </div>
@@ -254,25 +254,25 @@ export default function profile({user}) {
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">LinkedIn</label>
+                                        <label className="floating-label" htmlFor="Title">LinkedIn</label>
                                         <input {...register("linkedin")} className="form-control" id="title"/>
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">Twitter</label>
+                                        <label className="floating-label" htmlFor="Title">Twitter</label>
                                         <input {...register("twitter")} className="form-control" id="title"/>
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">Github</label>
+                                        <label className="floating-label" htmlFor="Title">Github</label>
                                         <input {...register("github")} className="form-control" id="title"/>
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">Skype</label>
+                                        <label className="floating-label" htmlFor="Title">Skype</label>
                                         <input {...register("skype")} className="form-control" id="title"/>
                                     </div>
                                 </div>
@@ -281,7 +281,7 @@ export default function profile({user}) {
                                 </div>
                                 <div className="col-sm-12">
                                     <div className="form-group fill">
-                                        <label className="floating-label" for="Icon">Profile Image</label>
+                                        <label className="floating-label" htmlFor="Icon">Profile Image</label>
                                         <input  type="file" {...register("image")} className="form-control" id="Icon"/>
                                     </div>
                                 </div>

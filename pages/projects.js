@@ -118,28 +118,28 @@ export default function projects() {
     },[dispatch]);
   return (
     <>
-        <div class="container-fluid flex-grow-1 container-p-y">
-            <h4 class="font-weight-bold py-3 mb-0">Projects</h4>
-            <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
-                    <li class="breadcrumb-item active"><a href="#!">Projects</a></li>
+        <div className="container-fluid flex-grow-1 container-p-y">
+            <h4 className="font-weight-bold py-3 mb-0">Projects</h4>
+            <div className="text-muted small mt-0 mb-4 d-block breadcrumb">
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item"><a href="#"><i className="feather icon-home"></i></a></li>
+                    <li className="breadcrumb-item active"><a href="#!">Projects</a></li>
                 </ol>
             </div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row align-items-center m-l-0">
-                                    <div class="col-sm-6">
+                <div className="row">
+                    <div className="col-xl-12">
+                        <div className="card">
+                            <div className="card-body">
+                                <div className="row align-items-center m-l-0">
+                                    <div className="col-sm-6">
                                     </div>
-                                    <div class="col-sm-6 text-right">
-                                        <button class="btn btn-success btn-sm mb-3 btn-round" onClick={() => reset()} data-toggle="modal" data-target="#modal-report"><i class="feather icon-plus"></i> Add Project</button>
+                                    <div className="col-sm-6 text-right">
+                                        <button className="btn btn-success btn-sm mb-3 btn-round" onClick={() => reset()} data-toggle="modal" data-target="#modal-report"><i className="feather icon-plus"></i> Add Project</button>
                                     </div>
                                 </div>
-                                <div class="table-responsive">
-                                    <table id="report-table" class="table mb-0">
-                                        <thead class="thead-light">
+                                <div className="table-responsive">
+                                    <table id="report-table" className="table mb-0">
+                                        <thead className="thead-light">
                                             <tr>
                                                 <th>Project</th>
                                                 <th>Description</th>
@@ -150,21 +150,21 @@ export default function projects() {
                                         <tbody>
                                             {projects.map((project)=>(
                                                 <tr key={project.project_id}>
-                                                    <td class="align-middle">
-                                                        <img src={project.image} alt="contact-img" title="contact-img" class="rounded mr-3" height="48" />
-                                                        <p class="m-0 d-inline-block align-middle font-16">
-                                                            <a href="#!" class="text-body">{project.title}</a>
+                                                    <td className="align-middle">
+                                                        <img src={project.image} alt="contact-img" title="contact-img" className="rounded mr-3" height="48" />
+                                                        <p className="m-0 d-inline-block align-middle font-16">
+                                                            <a href="#!" className="text-body">{project.title}</a>
                                                         </p>
                                                     </td>
-                                                    <td class="align-middle">
+                                                    <td className="align-middle">
                                                         {project.description}
                                                     </td>
-                                                    <td class="align-middle">
+                                                    <td className="align-middle">
                                                         {project.url}
                                                     </td>
-                                                    <td class="table-action">
-                                                        <a href="#!"  data-toggle="modal" data-target="#modal-edit" onClick={() => reset2(project)} class="btn btn-icon btn-outline-success"><i class="feather icon-edit"></i></a>
-                                                        <a href="#!" onClick={e => removeProject(project.project_id)} class="btn btn-icon btn-outline-danger"><i class="feather icon-trash-2"></i></a>
+                                                    <td className="table-action">
+                                                        <a href="#!"  data-toggle="modal" data-target="#modal-edit" onClick={() => reset2(project)} className="btn btn-icon btn-outline-success"><i className="feather icon-edit"></i></a>
+                                                        <a href="#!" onClick={e => removeProject(project.project_id)} className="btn btn-icon btn-outline-danger"><i className="feather icon-trash-2"></i></a>
                                                     </td>
                                                 </tr>
                                             ))}
@@ -176,45 +176,45 @@ export default function projects() {
                     </div>
                 </div>
         </div>
-        <div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Add Project</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div className="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <h5 className="modal-title">Add Project</h5>
+                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form onSubmit={handleSubmit(onSubmit)} enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label class="floating-label" for="Title">Title</label>
+                <div className="modal-body">
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div className="row">
+                            <div className="col-sm-12">
+                                <div className="form-group">
+                                    <label className="floating-label" for="Title">Title</label>
                                     <input {...register("title")} className="form-control" id="title"/>
-                                    {/* <input type="text" class="form-control" id="title" placeholder=""/> */}
+                                    {/* <input type="text" className="form-control" id="title" placeholder=""/> */}
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label class="floating-label" for="Title">URL</label>
+                            <div className="col-sm-12">
+                                <div className="form-group">
+                                    <label className="floating-label" for="Title">URL</label>
                                     <input {...register("url")} className="form-control" id="title"/>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Description</label>
-                                    <textarea class="form-control" {...register("description")}></textarea>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" for="Details">Description</label>
+                                    <textarea className="form-control" {...register("description")}></textarea>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Icon">Project Image</label>
-                                    <input  type="file" {...register("image")} class="form-control" id="Icon"/>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" for="Icon">Project Image</label>
+                                    <input  type="file" {...register("image")} className="form-control" id="Icon"/>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <button class="btn btn-primary">Submit</button>
+                            <div className="col-sm-12">
+                                <button className="btn btn-primary">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -223,46 +223,46 @@ export default function projects() {
         </div>
         </div>
 
-        <div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Edit Project</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div className="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <h5 className="modal-title">Edit Project</h5>
+                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div className="modal-body">
                     <form onSubmit={handleSubmit2(onUpdate)} enctype="multipart/form-data">
                     <input {...register2("project_id")} className="form-control" type="hidden"/>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label class="floating-label" for="Title">Title</label>
+                        <div className="row">
+                            <div className="col-sm-12">
+                                <div className="form-group">
+                                    <label className="floating-label" for="Title">Title</label>
                                     <input {...register2("title")} className="form-control" id="title"/>
-                                    {/* <input type="text" class="form-control" id="title" placeholder=""/> */}
+                                    {/* <input type="text" className="form-control" id="title" placeholder=""/> */}
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label class="floating-label" for="Title">URL</label>
+                            <div className="col-sm-12">
+                                <div className="form-group">
+                                    <label className="floating-label" for="Title">URL</label>
                                     <input {...register2("url")} className="form-control" id="title"/>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Description</label>
-                                    <textarea class="form-control" {...register2("description")}></textarea>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" for="Details">Description</label>
+                                    <textarea className="form-control" {...register2("description")}></textarea>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" for="Icon">Project Image</label>
-                                    <input  type="file" {...register2("image")} class="form-control" id="Icon"/>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" for="Icon">Project Image</label>
+                                    <input  type="file" {...register2("image")} className="form-control" id="Icon"/>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <button class="btn btn-primary">Submit</button>
+                            <div className="col-sm-12">
+                                <button className="btn btn-primary">Submit</button>
                             </div>
                         </div>
                     </form>

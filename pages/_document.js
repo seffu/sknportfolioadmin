@@ -93,8 +93,8 @@
           <link rel="stylesheet" href="assets/css/pages/authentication.css"/>
         </Head>
         <body >
-            <div class="page-loader">
-              <div class="bg-primary"></div>
+            <div className="page-loader">
+              <div className="bg-primary"></div>
             </div>
             <Main />
             <NextScript />
