@@ -8,7 +8,7 @@ import Router from 'next/router'
 
 
 
-export default function signup() {
+export default function Signup() {
   const dispatch = useDispatch();
   const { register, handleSubmit} = useForm();
   // const onSubmit = async (data) => {
@@ -83,7 +83,7 @@ export default function signup() {
   )
 }
 
-signup.getLayout = function getLayout(page) {
+Signup.getLayout = function getLayout(page) {
     return (
       <AuthLayout>
         {page}

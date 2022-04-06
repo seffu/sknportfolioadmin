@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from 'react';
 import { useForm } from "react-hook-form"
 import { updateUser } from "../features/slices/usersSlice";
-export default function profile({user}) {
+export default function Profile({user}) {
 
 
     const dispatch = useDispatch();
@@ -309,7 +309,7 @@ export async function getServerSideProps() {
     return { props: { user:data } }
   }
 
-profile.getLayout = function getLayout(page) {
+Profile.getLayout = function getLayout(page) {
     return (
       <Layout>
         {page}

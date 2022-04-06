@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { retrieveInterests,createInterest,deleteInterest, updateInterest } from "../features/slices/interestsSlice";
 
-export default function interests() {
+export default function Interests() {
     const dispatch = useDispatch();
     const interests = useSelector((state) => state.interests);
     const { register, handleSubmit,reset} = useForm();
@@ -181,24 +181,24 @@ export default function interests() {
                     </button>
                 </div>
                 <div className="modal-body">
-                    <form onSubmit={handleSubmit(onSubmit)} enctype="multipart/form-data">
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="row">
                             <div className="col-sm-12">
                                 <div className="form-group">
-                                    <label className="floating-label" for="Title">Title</label>
+                                    <label className="floating-label" htmlFor="Title">Title</label>
                                     <input {...register("title")} className="form-control" id="title"/>
                                     {/* <input type="text" className="form-control" id="title" placeholder=""/> */}
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Details</label>
+                                    <label className="floating-label" htmlFor="Details">Details</label>
                                     <textarea className="form-control" {...register("details")}></textarea>
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Icon">Interest Image</label>
+                                    <label className="floating-label" htmlFor="Icon">Interest Image</label>
                                     <input  type="file" {...register("image")} className="form-control" id="Icon"/>
                                 </div>
                             </div>
@@ -222,25 +222,25 @@ export default function interests() {
                     </button>
                 </div>
                 <div className="modal-body">
-                    <form onSubmit={handleSubmit2(onUpdate)} enctype="multipart/form-data">
+                    <form onSubmit={handleSubmit2(onUpdate)}>
                         <input {...register2("interest_id")} className="form-control" type="hidden"/>
                         <div className="row">
                             <div className="col-sm-12">
                                 <div className="form-group">
-                                    <label className="floating-label" for="Title">Title</label>
+                                    <label className="floating-label" htmlFor="Title">Title</label>
                                     <input {...register2("title")} className="form-control" id="title"/>
                                     {/* <input type="text" className="form-control" id="title" placeholder=""/> */}
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Details</label>
+                                    <label className="floating-label" htmlFor="Details">Details</label>
                                     <textarea className="form-control" {...register2("details")}></textarea>
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Icon">Interest Image</label>
+                                    <label className="floating-label" htmlFor="Icon">Interest Image</label>
                                     <input  type="file" {...register2("image")} className="form-control" id="Icon"/>
                                 </div>
                             </div>
@@ -257,7 +257,7 @@ export default function interests() {
   )
 }
 
-interests.getLayout = function getLayout(page) {
+Interests.getLayout = function getLayout(page) {
     return (
       <Layout>
         {page}

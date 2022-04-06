@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { retrieveCertifications,createCertification,deleteCertification, updateCertification } from "../features/slices/certificationsSlice";
 
-export default function certifications() {
+export default function Certifications() {
     const dispatch = useDispatch();
     const certifications = useSelector((state) => state.certifications);
     const { register, handleSubmit,reset} = useForm();
@@ -190,42 +190,42 @@ export default function certifications() {
                     </button>
                 </div>
                 <div className="modal-body">
-                    <form onSubmit={handleSubmit(onSubmit)} enctype="multipart/form-data">
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="row">
                             <div className="col-sm-12">
                                 <div className="form-group">
-                                    <label className="floating-label" for="Title">Title</label>
+                                    <label className="floating-label" htmlFor="Title">Title</label>
                                     <input {...register("title")} className="form-control" id="title"/>
                                     {/* <input type="text" className="form-control" id="title" placeholder=""/> */}
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Organization</label>
+                                    <label className="floating-label" htmlFor="Details">Organization</label>
                                     <input {...register("organization")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Credential ID</label>
+                                    <label className="floating-label" htmlFor="Details">Credential ID</label>
                                     <input {...register("credential_id")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Credential URL</label>
+                                    <label className="floating-label" htmlFor="Details">Credential URL</label>
                                     <input {...register("credential_url")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div className="col-sm-6">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Issue Date</label>
+                                    <label className="floating-label" htmlFor="Details">Issue Date</label>
                                     <input type="text" className="form-control datepicker-base" {...register("issue_date")} />
                                 </div>
                             </div>
                             <div className="col-sm-6">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Expiry Date</label>
+                                    <label className="floating-label" htmlFor="Details">Expiry Date</label>
                                     <input type="text" {...register("expiry_date")} className="form-control datepicker-base" />
                                 </div>
                             </div>
@@ -261,43 +261,43 @@ export default function certifications() {
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form onSubmit={handleSubmit2(onUpdate)} enctype="multipart/form-data">
+                    <form onSubmit={handleSubmit2(onUpdate)}>
                     <input {...register2("certification_id")} className="form-control" type="hidden"/>
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="floating-label" for="Title">Title</label>
+                                    <label class="floating-label" htmlFor="Title">Title</label>
                                     <input {...register2("title")} className="form-control" id="title"/>
                                     {/* <input type="text" class="form-control" id="title" placeholder=""/> */}
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Organization</label>
+                                    <label class="floating-label" htmlFor="Details">Organization</label>
                                     <input {...register2("organization")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Credential ID</label>
+                                    <label class="floating-label" htmlFor="Details">Credential ID</label>
                                     <input {...register2("credential_id")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Credential URL</label>
+                                    <label class="floating-label" htmlFor="Details">Credential URL</label>
                                     <input {...register2("credential_url")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Issue Date</label>
+                                    <label class="floating-label" htmlFor="Details">Issue Date</label>
                                     <input type="text" class="form-control datepicker-base" {...register2("issue_date")} />
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Expiry Date</label>
+                                    <label class="floating-label" htmlFor="Details">Expiry Date</label>
                                     <input type="text" {...register2("expiry_date")} class="form-control datepicker-base" />
                                 </div>
                             </div>
@@ -326,7 +326,7 @@ export default function certifications() {
   )
 }
 
-certifications.getLayout = function getLayout(page) {
+Certifications.getLayout = function getLayout(page) {
     return (
       <Layout>
         {page}

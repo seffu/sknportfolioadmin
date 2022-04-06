@@ -1,7 +1,7 @@
 import React from 'react';
 import AuthLayout from '../layouts/AuthLayout'
 import Link from 'next/link'
-export default function passwordreset() {
+export default function Passwordreset() {
   return (
     <>
                       <h4 className="text-center text-lighter font-weight-normal mt-5 mb-0">Reset Your Password</h4>
@@ -19,7 +19,7 @@ export default function passwordreset() {
   )
 }
 
-passwordreset.getLayout = function getLayout(page) {
+Passwordreset.getLayout = function getLayout(page) {
   return (
     <AuthLayout>
       {page}

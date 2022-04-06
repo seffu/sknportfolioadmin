@@ -100,33 +100,32 @@
             </div>
             <Main />
             <NextScript />
+            
+            <Script src="assets/js/pace.js"></Script>
+            <Script src="assets/js/jquery-3.3.1.min.js"></Script>
+            <Script src="assets/libs/popper/popper.js"></Script>
+            <Script src="assets/js/bootstrap.js"></Script>
+            <Script src="assets/js/sidenav.js"></Script>
+            <Script src="assets/js/layout-helpers.js"></Script>
+            <Script src="assets/js/material-ripple.js"></Script>
 
+            <Script src="assets/libs/perfect-scrollbar/perfect-scrollbar.js"></Script>
+            <Script src="assets/libs/eve/eve.js"></Script>
+            <Script src="assets/libs/flot/flot.js"></Script>
+            <Script src="assets/libs/flot/curvedLines.js"></Script>
+            <Script src="assets/libs/chart-am4/core.js"></Script>
+            <Script src="assets/libs/chart-am4/charts.js"></Script>
+            <Script src="assets/libs/chart-am4/animated.js"></Script>
 
-                <Script src="assets/js/pace.js"></Script>
-                <Script src="assets/js/jquery-3.3.1.min.js"></Script>
-                <Script src="assets/libs/popper/popper.js"></Script>
-                <Script src="assets/js/bootstrap.js"></Script>
-                <Script src="assets/js/sidenav.js"></Script>
-                <Script src="assets/js/layout-helpers.js"></Script>
-                <Script src="assets/js/material-ripple.js"></Script>
+            <Script src="assets/libs/moment/moment.js"></Script>
+            <Script src="assets/libs/bootstrap-datepicker/bootstrap-datepicker.js"></Script>
+            <Script src="assets/js/pages/forms_pickers.js"></Script>
 
-                <Script src="assets/libs/perfect-scrollbar/perfect-scrollbar.js"></Script>
-                <Script src="assets/libs/eve/eve.js"></Script>
-                <Script src="assets/libs/flot/flot.js"></Script>
-                <Script src="assets/libs/flot/curvedLines.js"></Script>
-                <Script src="assets/libs/chart-am4/core.js"></Script>
-                <Script src="assets/libs/chart-am4/charts.js"></Script>
-                <Script src="assets/libs/chart-am4/animated.js"></Script>
-
-                <Script src="assets/libs/moment/moment.js"></Script>
-                <Script src="assets/libs/bootstrap-datepicker/bootstrap-datepicker.js"></Script>
-                <Script src="assets/js/pages/forms_pickers.js"></Script>
-
-                <Script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></Script>
-                
-                <Script src="assets/js/demo.js"></Script>
-                <Script src="assets/js/analytics.js"></Script>
-                <Script src="assets/libs/datatables/datatables.js"></Script>
+            <Script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></Script>
+            
+            <Script src="assets/js/demo.js"></Script>
+            <Script src="assets/js/analytics.js"></Script>
+            <Script src="assets/libs/datatables/datatables.js"></Script>
 
         </body>
       </Html>

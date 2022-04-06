@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { retrieveExperiences,createExperience,deleteExperience,updateExperience } from "../features/slices/experiencesSlice";
 
-export default function experience() {
+export default function Experience() {
     const dispatch = useDispatch();
     const experiences = useSelector((state) => state.experiences);
     const { register, handleSubmit,reset } = useForm();
@@ -189,37 +189,37 @@ export default function experience() {
                         <div className="row">
                             <div className="col-sm-12">
                                 <div className="form-group">
-                                    <label className="floating-label" for="Title">Company</label>
+                                    <label className="floating-label" htmlFor="Title">Company</label>
                                     <input {...register("company")} className="form-control" id="title"/>
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Role</label>
+                                    <label className="floating-label" htmlFor="Details">Role</label>
                                     <input {...register("role")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Location</label>
+                                    <label className="floating-label" htmlFor="Details">Location</label>
                                     <input {...register("location")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Description</label>
+                                    <label className="floating-label" htmlFor="Details">Description</label>
                                     <textarea className="form-control" {...register("description")}></textarea>
                                 </div>
                             </div>
                             <div className="col-sm-6">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Start Date</label>
+                                    <label className="floating-label" htmlFor="Details">Start Date</label>
                                     <input type="text" className="form-control datepicker-base" {...register("start_date")} />
                                 </div>
                             </div>
                             <div className="col-sm-6">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">End Date</label>
+                                    <label className="floating-label" htmlFor="Details">End Date</label>
                                     <input type="text" {...register("end_date")} className="form-control datepicker-base" />
                                 </div>
                             </div>
@@ -259,38 +259,38 @@ export default function experience() {
                             <div className="row">
                                 <div className="col-sm-12">
                                     <div className="form-group">
-                                        <label className="floating-label" for="Title">Company</label>
+                                        <label className="floating-label" htmlFor="Title">Company</label>
                                         <input {...register2("company")} className="form-control" id="title"/>
                                     </div>
                                 </div>
                                 <input {...register2("experience_id")} className="form-control" type="hidden"/>
                                 <div className="col-sm-12">
                                     <div className="form-group fill">
-                                        <label className="floating-label" for="Details">Role</label>
+                                        <label className="floating-label" htmlFor="Details">Role</label>
                                         <input {...register2("role")} className="form-control" id="proficiency"/>
                                     </div>
                                 </div>
                                 <div className="col-sm-12">
                                     <div className="form-group fill">
-                                        <label className="floating-label" for="Details">Location</label>
+                                        <label className="floating-label" htmlFor="Details">Location</label>
                                         <input {...register2("location")} className="form-control" id="proficiency"/>
                                     </div>
                                 </div>
                                 <div className="col-sm-12">
                                     <div className="form-group fill">
-                                        <label className="floating-label" for="Details">Description</label>
+                                        <label className="floating-label" htmlFor="Details">Description</label>
                                         <textarea className="form-control" {...register2("description")}></textarea>
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="form-group fill">
-                                        <label className="floating-label" for="Details">Start Date</label>
+                                        <label className="floating-label" htmlFor="Details">Start Date</label>
                                         <input type="text" className="form-control datepicker-base" {...register2("start_date")} />
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="form-group fill">
-                                        <label className="floating-label" for="Details">End Date</label>
+                                        <label className="floating-label" htmlFor="Details">End Date</label>
                                         <input type="text" {...register2("end_date")} className="form-control datepicker-base" />
                                     </div>
                                 </div>
@@ -319,7 +319,7 @@ export default function experience() {
   )
 }
 
-experience.getLayout = function getLayout(page) {
+Experience.getLayout = function getLayout(page) {
     return (
       <Layout>
         {page}

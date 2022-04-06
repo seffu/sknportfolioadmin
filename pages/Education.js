@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { retrieveEducations,createEducation,deleteEducation, updateEducation } from "../features/slices/educationsSlice";
 
-export default function education() {
+export default function Education() {
     const dispatch = useDispatch();
     const educations = useSelector((state) => state.educations);
     const { register, handleSubmit,reset} = useForm();
@@ -183,48 +183,48 @@ export default function education() {
                     </button>
                 </div>
                 <div className="modal-body">
-                    <form onSubmit={handleSubmit(onSubmit)} enctype="multipart/form-data">
+                    <form onSubmit={handleSubmit(onSubmit)} >
                         <div className="row">
                             <div className="col-sm-12">
                                 <div className="form-group">
-                                    <label className="floating-label" for="Title">Title</label>
+                                    <label className="floating-label" htmlFor="Title">Title</label>
                                     <input {...register("title")} className="form-control" id="title"/>
                                     {/* <input type="text" className="form-control" id="title" placeholder=""/> */}
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">School</label>
+                                    <label className="floating-label" htmlFor="Details">School</label>
                                     <input {...register("school")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Level</label>
+                                    <label className="floating-label" htmlFor="Details">Level</label>
                                     <input {...register("level")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Field</label>
+                                    <label className="floating-label" htmlFor="Details">Field</label>
                                     <input {...register("field")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div className="col-sm-12">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Location</label>
+                                    <label className="floating-label" htmlFor="Details">Location</label>
                                     <input {...register("location")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div className="col-sm-6">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">Start Date</label>
+                                    <label className="floating-label" htmlFor="Details">Start Date</label>
                                     <input type="text" className="form-control datepicker-base" {...register("start_date")} />
                                 </div>
                             </div>
                             <div className="col-sm-6">
                                 <div className="form-group fill">
-                                    <label className="floating-label" for="Details">End Date</label>
+                                    <label className="floating-label" htmlFor="Details">End Date</label>
                                     <input type="text" {...register("end_date")} className="form-control datepicker-base" />
                                 </div>
                             </div>
@@ -248,49 +248,49 @@ export default function education() {
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form onSubmit={handleSubmit2(onUpdate)} enctype="multipart/form-data">
+                    <form onSubmit={handleSubmit2(onUpdate)} >
                         <input {...register2("education_id")} className="form-control" type="hidden"/>
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="floating-label" for="Title">Title</label>
+                                    <label class="floating-label" htmlFor="Title">Title</label>
                                     <input {...register2("title")} className="form-control" id="title"/>
                                     {/* <input type="text" class="form-control" id="title" placeholder=""/> */}
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group fill">
-                                    <label class="floating-label" for="Details">School</label>
+                                    <label class="floating-label" htmlFor="Details">School</label>
                                     <input {...register2("school")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Level</label>
+                                    <label class="floating-label" htmlFor="Details">Level</label>
                                     <input {...register2("level")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Field</label>
+                                    <label class="floating-label" htmlFor="Details">Field</label>
                                     <input {...register2("field")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Location</label>
+                                    <label class="floating-label" htmlFor="Details">Location</label>
                                     <input {...register2("location")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group fill">
-                                    <label class="floating-label" for="Details">Start Date</label>
+                                    <label class="floating-label" htmlFor="Details">Start Date</label>
                                     <input type="text" class="form-control datepicker-base" {...register2("start_date")} />
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group fill">
-                                    <label class="floating-label" for="Details">End Date</label>
+                                    <label class="floating-label" htmlFor="Details">End Date</label>
                                     <input type="text" {...register2("end_date")} class="form-control datepicker-base" />
                                 </div>
                             </div>
@@ -307,7 +307,7 @@ export default function education() {
   )
 }
 
-education.getLayout = function getLayout(page) {
+Education.getLayout = function getLayout(page) {
     return (
       <Layout>
         {page}

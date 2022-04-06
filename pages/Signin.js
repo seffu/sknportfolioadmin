@@ -1,7 +1,7 @@
 import React from 'react';
 import AuthLayout from '../layouts/AuthLayout'
 import Link from 'next/link'
-export default function signin() {
+export default function Signin() {
   return (
     <>
                       <h4 className="text-center text-lighter font-weight-normal mt-5 mb-0">Login to Your Account</h4>
@@ -40,7 +40,7 @@ export default function signin() {
   )
 }
 
-signin.getLayout = function getLayout(page) {
+Signin.getLayout = function getLayout(page) {
   return (
     <AuthLayout>
       {page}

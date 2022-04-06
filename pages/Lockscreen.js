@@ -1,7 +1,7 @@
 import React from 'react';
 import AuthLayout from '../layouts/AuthLayout'
 import Link from 'next/link'
-export default function lockscreen() {
+export default function Lockscreen() {
   return (
     <>
                     <h4 className="text-center text-lighter font-weight-normal mt-5 mb-0">Lock Screen</h4>
@@ -40,7 +40,7 @@ export default function lockscreen() {
   )
 }
 
-lockscreen.getLayout = function getLayout(page) {
+Lockscreen.getLayout = function getLayout(page) {
   return (
     <AuthLayout>
       {page}
