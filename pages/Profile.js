@@ -187,7 +187,7 @@ export default function Profile({user}) {
                         <form onSubmit={handleSubmit(onUpdate)}>
                         <input {...register("project_id")} className="form-control" type="hidden"/>
                             <div className="row">
-                            <div class="col-12">
+                            <div className="col-12">
                                 <h5>General Information</h5>
                             </div>
                                 <div className="col-sm-6">
@@ -209,10 +209,10 @@ export default function Profile({user}) {
                                         <input {...register("email")} className="form-control" id="title"/>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="floating-label" htmlFor="Sex">Select Gender</label>
-                                    <select class="form-control" {...register("gender")}id="Sex">
+                                <div className="col-sm-6">
+                                <div className="form-group">
+                                    <label className="floating-label" htmlFor="Sex">Select Gender</label>
+                                    <select className="form-control" {...register("gender")}id="Sex">
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                     </select>
@@ -249,7 +249,7 @@ export default function Profile({user}) {
                                         <textarea rows="5" className="form-control" {...register("description")}></textarea>
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div className="col-12">
                                 <h5>Social Media</h5>
                                 </div>
                                 <div className="col-sm-6">
@@ -276,7 +276,7 @@ export default function Profile({user}) {
                                         <input {...register("skype")} className="form-control" id="title"/>
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div className="col-12">
                                 <h5>Image</h5>
                                 </div>
                                 <div className="col-sm-12">

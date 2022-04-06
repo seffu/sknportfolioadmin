@@ -173,7 +173,7 @@ export default function Education() {
                     </div>
                 </div>
         </div>
-        <div className="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div className="modal fade" id="modal-report" tabIndex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
         <div className="modal-dialog">
             <div className="modal-content">
                 <div className="modal-header">
@@ -238,64 +238,64 @@ export default function Education() {
         </div>
         </div>
 
-        <div className="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Edit Education</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div className="modal fade" id="modal-edit" tabIndex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <h5 className="modal-title">Edit Education</h5>
+                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div className="modal-body">
                     <form onSubmit={handleSubmit2(onUpdate)} >
                         <input {...register2("education_id")} className="form-control" type="hidden"/>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label class="floating-label" htmlFor="Title">Title</label>
+                        <div className="row">
+                            <div className="col-sm-12">
+                                <div className="form-group">
+                                    <label className="floating-label" htmlFor="Title">Title</label>
                                     <input {...register2("title")} className="form-control" id="title"/>
-                                    {/* <input type="text" class="form-control" id="title" placeholder=""/> */}
+                                    {/* <input type="text" className="form-control" id="title" placeholder=""/> */}
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" htmlFor="Details">School</label>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" htmlFor="Details">School</label>
                                     <input {...register2("school")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" htmlFor="Details">Level</label>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" htmlFor="Details">Level</label>
                                     <input {...register2("level")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" htmlFor="Details">Field</label>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" htmlFor="Details">Field</label>
                                     <input {...register2("field")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group fill">
-                                    <label class="floating-label" htmlFor="Details">Location</label>
+                            <div className="col-sm-12">
+                                <div className="form-group fill">
+                                    <label className="floating-label" htmlFor="Details">Location</label>
                                     <input {...register2("location")} className="form-control" id="proficiency"/>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group fill">
-                                    <label class="floating-label" htmlFor="Details">Start Date</label>
-                                    <input type="text" class="form-control datepicker-base" {...register2("start_date")} />
+                            <div className="col-sm-6">
+                                <div className="form-group fill">
+                                    <label className="floating-label" htmlFor="Details">Start Date</label>
+                                    <input type="text" className="form-control datepicker-base" {...register2("start_date")} />
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group fill">
-                                    <label class="floating-label" htmlFor="Details">End Date</label>
-                                    <input type="text" {...register2("end_date")} class="form-control datepicker-base" />
+                            <div className="col-sm-6">
+                                <div className="form-group fill">
+                                    <label className="floating-label" htmlFor="Details">End Date</label>
+                                    <input type="text" {...register2("end_date")} className="form-control datepicker-base" />
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <button class="btn btn-primary">Submit</button>
+                            <div className="col-sm-12">
+                                <button className="btn btn-primary">Submit</button>
                             </div>
                         </div>
                     </form>
