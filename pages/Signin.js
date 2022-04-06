@@ -30,7 +30,7 @@ export default function Signin() {
                           </div>
                       </form>
                       <div className="text-center text-muted">
-                          Don't have an account yet?
+                          Don&apos;t have an account yet?
                           <Link href="/signup">
                             <a> Sign Up</a>
                           </Link>

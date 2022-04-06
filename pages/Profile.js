@@ -61,7 +61,7 @@ export default function Profile({user}) {
             <div className="text-muted small mt-0 mb-4 d-block breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item"><a href="#"><i className="feather icon-home"></i></a></li>
-                    <li className="breadcrumb-item active">User's Profile</li>
+                    <li className="breadcrumb-item active">User&apos;s Profile</li>
                 </ol>
             </div>
             <div className="card mb-4">

@@ -31,12 +31,12 @@ const Header = () => {
                 <div className="demo-navbar-user nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                         <span className="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
-                            <Image src="http://res.cloudinary.com/seffukioi/image/upload/v1649150513/portfolio/l8yx5aws3jmgvzmkpb11.jpg" layout='fill' alt className="d-block ui-w-30 rounded-circle"/>
+                            <Image src="http://res.cloudinary.com/seffukioi/image/upload/v1649150513/portfolio/l8yx5aws3jmgvzmkpb11.jpg" height={50} width={50} alt="prof" className="d-block ui-w-30 rounded-circle"/>
                             <span className="px-1 mr-lg-2 ml-2 ml-lg-0">Seffu Kioi</span>
                         </span>
                     </a>
                     <div className="dropdown-menu dropdown-menu-right">
-                        <Link href="profile">
+                        <Link href="Profile">
                             <a href="javascript:" className="dropdown-item"><i className="feather icon-user text-muted"></i> &nbsp; My profile</a>
                         </Link>
                             <div className="dropdown-divider"></div>
